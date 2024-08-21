@@ -1,0 +1,27 @@
+# permissions for end users to edit schedulercontrollers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: custom-scheduler
+    app.kubernetes.io/managed-by: kustomize
+  name: schedulercontroller-editor-role
+rules:
+- apiGroups:
+  - sched.io
+  resources:
+  - schedulercontrollers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sched.io
+  resources:
+  - schedulercontrollers/status
+  verbs:
+  - get
