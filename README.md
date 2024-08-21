@@ -1,8 +1,14 @@
-# custom-scheduler
-// TODO(user): Add simple overview of use/purpose
+# custom-scheduler-controller
+
+This is a custom scheduler controller for managing a custom Kubernetes scheduler. Permits users to create, modify, and manage scheduling parameters through the CRD interface.
+
+The scheduler itself is a customized version of the Kubernetes scheduler which includes some out-of-tree plugins. Source for that is in another repo (TBD).
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+
+This controller manages a custom Kubernetes scheduler through the CRD interface. Users can manage custom scheduling settings by pushing a custom resource. Then, deployments choose which scheduling policy to use by setting a scheduling profile.
+
+TODO: Note that this is WIP and does not yet work.
 
 ## Getting Started
 
